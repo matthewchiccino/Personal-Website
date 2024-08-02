@@ -102,6 +102,7 @@ body, html {
     }
     .main-content {
         flex-direction: column; /* Stack the blurb and image vertically */
+        padding: 20px;
     }
     .blurb {
         padding-right: 0; /* Remove right padding */

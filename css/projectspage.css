@@ -49,7 +49,6 @@ body, html {
 /* Styling for the main content area */
 .main-content {
     flex: 1;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap; /* Allows projects to wrap if they exceed the width */
     justify-content: space-between; /* Distributes space between projects */
@@ -116,6 +115,8 @@ body, html {
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column; /* Stack items vertically */
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .left-panel {

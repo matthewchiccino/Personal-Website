@@ -12,16 +12,18 @@ body, html {
 /* Container for the left panel and main content */
 .container {
     display: flex;
+    
 }
 
 /* Styling for the left panel */
 .left-panel {
     background-color: #1e1e1e; /* Dark background for the left panel */
     width: 250px; /* Fixed width for the left panel */
+    flex-shrink: 0; /* Prevent shrinking */
     padding: 20px;
     box-sizing: border-box;
     border-right: 2px solid #333; /* Darker border between left panel and main content */
-    height: 100vh; /* Ensure it takes full viewport height */
+    overflow-y: auto; /* Allow scrolling within the left panel if needed */
 }
 
 /* Styling for links inside the left panel */
@@ -52,9 +54,11 @@ body, html {
     padding-left: 60px;
     padding-right: 100px;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 800px; /* Reduced fixed padding-bottom */
     background-color: #292929; /* Slightly lighter dark background for main content */
-    overflow-y: auto; /* Allow scrolling within the left panel if needed */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    display: flex; /* Make main-content a flex container */
+    flex-direction: column; /* Stack children vertically */
 }
 
 /* General style for common links */
@@ -75,6 +79,9 @@ body, html {
     
     .main-content {
         flex-direction: column; /* Stack items vertically */
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 600px;
     }
 
     .left-panel {

@@ -18,7 +18,8 @@ body, html {
 /* Styling for the left panel */
 .left-panel {
     background-color: #1e1e1e; /* Dark background for the left panel */
-    width: 250px;
+    width: 250px; /* Fixed width for the left panel */
+    flex-shrink: 0; /* Prevent shrinking */
     padding: 20px;
     box-sizing: border-box;
     border-right: 2px solid #333; /* Darker border between left panel and main content */
@@ -124,12 +125,13 @@ body, html {
     }
     .country {
         flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center the text */
     }
 
     .country-name {
         width: auto; /* Allow name to use full width */
-        text-align: left; /* Align text to the left */
+        text-align: center; 
     }
 
     .flag {
@@ -139,12 +141,13 @@ body, html {
     .photos {
         flex-direction: row; /* Keep photos in a row */
         flex-wrap: wrap; /* Allow photos to wrap */
-        gap: 5px; /* Adjust gap between photos */
+        justify-content: center; /* Center photos within the container */
+        gap: 15px; /* Adjust gap between photos */
     }
 
     .photos img {
+        height: 200px;
         width: auto; /* Adjust photo size for smaller screens */
-        height: 80px;
     }
 }
 
