@@ -18,10 +18,13 @@ body, html {
 .left-panel {
     background-color: #1e1e1e; /* Dark background for the left panel */
     width: 250px; /* Fixed width for the left panel */
+    
+    flex-shrink: 0; /* Prevent shrinking */
     padding: 20px;
     box-sizing: border-box;
     border-right: 2px solid #333; /* Darker border between left panel and main content */
     height: 100vh; /* Ensure it takes full viewport height */
+    overflow-y: auto; /* Allow scrolling within the left panel if needed */
 }
 
 /* Styling for links inside the left panel */
@@ -130,6 +133,18 @@ body, html {
     .project {
         width: 100%; /* Full width on mobile */
         margin: 10px 0; /* Space above and below each project */
+        position: relative; /* Ensure positioning is relative to the container */
+    }
+    .github-link {
+        position: static; /* Change positioning to static */
+        display: block; /* Ensure the link is displayed as a block element */
+        margin-top: 10px; /* Add space above the GitHub link */
+        text-align: right; /* Align to the right of the container */
+    }
+
+    .github-link img {
+        width: 24px; /* Adjust icon size for mobile */
+        height: 24px; /* Adjust icon size for mobile */
     }
 }
 

@@ -97,6 +97,7 @@ body, html {
         height: auto; /* Adjust height based on content */
         width: 100px;
         padding: 10px;
+        padding-bottom: 20px;
         border-right: none; /* Remove the right border */
         border-bottom: 2px solid #333; /* Add a bottom border */
     }
