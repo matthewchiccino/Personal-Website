@@ -1,0 +1,174 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for the whole page */
+    color: #e0e0e0; /* Light text color */
+    overflow: hidden; /* Prevent default scroll on body */
+}
+
+/* Container for the left panel and main content */
+.container {
+    display: flex;
+    height: 100vh; /* Ensure the container takes the full viewport height */
+}
+
+/* Styling for the left panel */
+.left-panel {
+    background-color: #1e1e1e; /* Dark background for the left panel */
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 2px solid #333; /* Darker border between left panel and main content */
+    overflow-y: auto; /* Allow scrolling within the left panel if needed */
+}
+
+/* Styling for the main content area */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-bottom: 60px;
+    background-color: #292929; /* Slightly lighter dark background for main content */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    
+}
+
+/* Styling for links inside the left panel */
+.left-panel a {
+    display: block; /* Makes the anchor take up the full width */
+    color: #b3a0ff; /* Light purple text color for links */
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #333; /* Dark separator line */
+}
+
+/* Style for the active link */
+.left-panel a:active, /* Applied when the link is clicked */
+.left-panel a:focus { /* Applied when the link receives focus (for accessibility) */
+    color: #ffffff; /* Change text color to white */
+    font-weight: bold; /* Make text bold */
+    text-decoration: underline; /* Underline the text */
+}
+
+/* Remove the underline from the last link */
+.left-panel a:last-child {
+    border-bottom: none;
+}
+
+/* Travel page styling */
+.countries {
+    display: flex;
+    flex-direction: column; /* Stack countries vertically */
+    gap: 20px; /* Space between countries */
+}
+
+/* Country container */
+.country {
+    display: flex;
+    flex-direction: row; /* Arrange contents in a row */
+    align-items: center; /* Align items vertically center */
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 20px; /* Space between items */
+    border: 2px solid #505050; /* Bright pink border */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    flex-shrink: 0; /* Prevent shrinking of the container */
+}
+
+/* Country name */
+.country-name {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+    width: 300px; /* Fixed width for name */
+}
+
+/* Flag image */
+.flag {
+    width: 25px; /* Adjust width as needed */
+    height: auto;
+}
+
+/* Photos container */
+.photos {
+    display: flex;
+    flex-direction: row; /* Arrange photos in a row */
+    gap: 10px; /* Space between photos */
+    flex-grow: 1; /* Allow photos container to grow and fill available space */
+    overflow: auto; /* Allow scrolling within the photos container if needed */
+}
+
+/* Individual photo */
+.photos img {
+    width: auto; /* Adjust size as needed */
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .left-panel {
+        height: auto; /* Adjust height based on content */
+        width: 100px;
+        padding: 10px;
+        border-right: none; /* Remove the right border */
+        border-bottom: 2px solid #333; /* Add a bottom border */
+    }
+    .country {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .country-name {
+        width: auto; /* Allow name to use full width */
+        text-align: left; /* Align text to the left */
+    }
+
+    .flag {
+        margin-bottom: 10px; /* Space between flag and photos */
+    }
+
+    .photos {
+        flex-direction: row; /* Keep photos in a row */
+        flex-wrap: wrap; /* Allow photos to wrap */
+        gap: 5px; /* Adjust gap between photos */
+    }
+
+    .photos img {
+        width: auto; /* Adjust photo size for smaller screens */
+        height: 80px;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(238, 228, 255);
+    padding: 15px;
+    width: 100%; /* Ensure footer spans the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    position: sticky; /* Sticky footer at the bottom of the viewport */
+    bottom: 0;
+}
+/* Styling for Font Awesome icons */
+footer .fa {
+    font-size: 25px; /* Increase the font size of icons */
+    color: #7553ff; /* Light purple color for icons */
+    text-decoration: none; /* Remove underline from icons */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+footer .fa:hover {
+    color: #36008d; /* Change color on hover for better visibility */
+}
+

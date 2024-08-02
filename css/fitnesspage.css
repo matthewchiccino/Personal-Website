@@ -1,0 +1,121 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for the whole page */
+    color: #e0e0e0; /* Light text color */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+}
+
+/* Container for the left panel and main content */
+.container {
+    display: flex;
+}
+
+/* Styling for the left panel */
+.left-panel {
+    background-color: #1e1e1e; /* Dark background for the left panel */
+    width: 250px; /* Fixed width for the left panel */
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 2px solid #333; /* Darker border between left panel and main content */
+    height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Styling for links inside the left panel */
+.left-panel a {
+    display: block; /* Makes the anchor take up the full width */
+    color: #b3a0ff; /* Light purple text color for links */
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #333; /* Dark separator line */
+}
+
+/* Style for the active link */
+.left-panel a:active, /* Applied when the link is clicked */
+.left-panel a:focus { /* Applied when the link receives focus (for accessibility) */
+    color: #ffffff; /* Change text color to white */
+    font-weight: bold; /* Make text bold */
+    text-decoration: underline; /* Underline the text */
+}
+
+/* Remove the underline from the last link */
+.left-panel a:last-child {
+    border-bottom: none;
+}
+
+
+.section {
+    flex: 1; /* Allow sections to grow and fill available space */
+    border: 2px solid #8f8f8f; /* Border around each section */
+    padding: 20px; /* Padding inside the border */
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+/* Styling for the main content area */
+.main-content {
+    display: flex; /* Align sections horizontally */
+    flex-grow: 1;
+    padding-left: 60px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #292929; /* Slightly lighter dark background for main content */
+    overflow-y: auto; /* Allow scrolling within the left panel if needed */
+    gap: 20px; /* Space between the two sections */
+    justify-content: space-between; /* Distribute space between sections */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    
+    .main-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .left-panel {
+        height: auto; /* Adjust height based on content */
+        width: 100px;
+        padding: 10px;
+        border-right: none; /* Remove the right border */
+        border-bottom: 2px solid #333; /* Add a bottom border */
+    }
+}
+
+/* Styling for footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(238, 228, 255);
+    padding: 15px;
+    width: 100%; /* Ensure footer spans the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    position: sticky; /* Sticky footer at the bottom of the viewport */
+    bottom: 0;
+}
+/* Styling for Font Awesome icons */
+footer .fa {
+    font-size: 25px; /* Increase the font size of icons */
+    color: #7553ff; /* Light purple color for icons */
+    text-decoration: none; /* Remove underline from icons */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+footer .fa:hover {
+    color: #36008d; /* Change color on hover for better visibility */
+}
