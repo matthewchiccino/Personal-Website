@@ -114,6 +114,7 @@ body, html {
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column; /* Stack items vertically */
+        padding-bottom: 45;
     }
 
     .left-panel {
