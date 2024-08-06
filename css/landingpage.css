@@ -12,7 +12,6 @@ body, html {
 /* Container for left panel and main content */
 .container {
     display: flex;
-    flex: 1; /* Take up the remaining vertical space */
 }
 
 /* Styling for the left panel */
@@ -53,10 +52,9 @@ body, html {
     display: flex;
     flex-direction: row; /* Align children in a row */
     justify-content: space-between; /* Space between children */
-    height: 100vh;
     padding: 20px;
     box-sizing: border-box;
-    height: calc(100vh - 60px); /* Adjust height to account for footer height */
+
     background: linear-gradient(-45deg, #858585, #3b3b3b, #292929, #151515);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;

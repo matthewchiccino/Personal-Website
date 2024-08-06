@@ -56,7 +56,6 @@ body, html {
     flex-wrap: wrap; /* Allows projects to wrap if they exceed the width */
     justify-content: space-between; /* Distributes space between projects */
     
-    background-color: #292929; /* Slightly lighter dark background for main content */
     padding-left: 60px;
     padding-right: 100px;
     padding-top: 20px;
