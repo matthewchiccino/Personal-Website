@@ -163,6 +163,7 @@ body, html {
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 200px;
+        animation: gradient-mobile 10s ease infinite; /* Faster animation for mobile */
     }
 
     .left-panel {
@@ -175,6 +176,17 @@ body, html {
 
     .gr_custom_container_ {
         max-width: 100%; /* Ensure widget fits within screen width */
+    }
+    @keyframes gradient-mobile {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 }
 

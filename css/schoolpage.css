@@ -71,6 +71,7 @@ body, html {
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
+        animation: gradient-mobile 10s ease infinite; /* Faster animation for mobile */
     }
 
     .left-panel {
@@ -80,7 +81,17 @@ body, html {
         border-right: none; /* Remove the right border */
         border-bottom: 2px solid #333; /* Add a bottom border */
     }
-
+    @keyframes gradient-mobile {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 }
 
 /* Styling for footer */

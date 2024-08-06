@@ -107,6 +107,18 @@ body, html {
     .main-content {
         flex-direction: column; /* Stack the blurb and image vertically */
         padding: 20px;
+        animation: gradient-mobile 10s ease infinite; /* Faster animation for mobile */
+    }
+    @keyframes gradient-mobile {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
     .blurb {
         padding-right: 0; /* Remove right padding */
