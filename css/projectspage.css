@@ -61,6 +61,10 @@ body, html {
     padding-right: 100px;
     padding-top: 20px;
     padding-bottom: 40px;
+
+    background: linear-gradient(-45deg, #858585, #3b3b3b, #292929, #151515);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
 }
 
 /* Styling for the project cards */
@@ -71,6 +75,7 @@ body, html {
     transition: box-shadow 0.3s, transform 0.3s;
     border: 2px solid #ffffff; /* Adding a border */
     transition: transform 0.3s;
+    background-color: #282828;
 }
 
 .project:hover {
@@ -172,4 +177,16 @@ footer .fa {
 
 footer .fa:hover {
     color: #36008d; /* Change color on hover for better visibility */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
