@@ -1,0 +1,137 @@
+/* General reset */
+
+/* Container for the left panel and main content */
+.container {
+    display: flex;
+    flex-direction: row; /* Ensure the panels are side by side by default */
+}
+
+
+/* Styling for the header and widgets */
+.header-widgets {
+    display: flex; /* Align header and widgets horizontally */
+    flex-direction: column; /* Stack header and widgets vertically */
+    gap: 20px; /* Space between header and widgets */
+}
+
+.widgets-container {
+    display: flex; /* Align widgets horizontally */
+    gap: 20px; /* Space between widgets */
+    flex-wrap: wrap; /* Wrap widgets to the next line on smaller screens */
+}
+
+.gr_custom_container_ {
+    /* Customize your Goodreads widget container here */
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px 5px;
+    background-color: #FFF;
+    color: #000;
+    width: 100%; /* Ensure the widget container takes full width */
+    max-width: 300px; /* Limit the maximum width of the widget */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+.gr_custom_header_ {
+    /* Customize your Goodreads header here */
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 120%;
+}
+
+.gr_custom_each_container_ {
+    /* Customize each individual book container here */
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aaa;
+}
+
+.gr_custom_book_container_ {
+    /* Customize your book covers here */
+    overflow: hidden;
+    height: 60px;
+    float: left;
+    margin-right: 4px;
+    width: 50px;
+}
+
+.gr_custom_author_ {
+    /* Customize your author names here */
+    font-size: 10px;
+}
+
+.gr_custom_tags_ {
+    /* Customize your tags here */
+    font-size: 10px;
+    color: gray;
+}
+
+.gr_custom_rating_ {
+    /* Customize your rating stars here */
+    float: right;
+}
+
+.time-container {
+    clear: both; /* Ensure it doesn't float next to the left-panel */
+    padding: 20px; /* Optional, for spacing */
+}
+
+/* Styling for the main content area */
+.main-content {
+    flex-grow: 1; /* Allow main-content to expand and fill available space */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px; /* Adjusted padding */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    display: flex; /* Make main-content a flex container */
+    flex-direction: column; /* Stack children vertically */
+
+    position: relative; /* Ensure expand-button positioning is relative to this container */
+    transition: margin-left 0.3s ease; /* Smooth transition when margin changes */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    
+    .main-content {
+        flex-direction: column; /* Stack items vertically */
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 200px;
+    }
+
+
+    .gr_custom_container_ {
+        max-width: 100%; /* Ensure widget fits within screen width */
+    }
+    @keyframes gradient-mobile {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
