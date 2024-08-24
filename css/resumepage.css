@@ -1,0 +1,67 @@
+
+/* Container for the left panel and main content */
+.container {
+    display: flex;
+    height: 100%;
+}
+
+
+/* Styling for the main content area */
+.main-content {
+    display: flex;
+    flex-direction: row; /* Align children in a row */
+    justify-content: space-between; /* Space between children */
+    width: 100%;
+    flex: 1; /* Ensures main-content takes up the remaining space */
+    
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+/* Styling for the text section */
+.text {
+    flex: 0.4; /* Allow the heading to take up available space */
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust font size as needed */
+    padding-right: 10px;
+}
+
+/* Styling for the iframe */
+.resume {
+    flex: 1; /* Allow the iframe to take up available space */
+    max-width: 100%; /* Ensure iframe does not exceed container width */
+    height: auto; /* Adjust height based on content */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack items vertically */
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 200px;
+    }
+    .main-content h1 {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add space below the heading */
+    }
+    .resume {
+        width: 100%; /* Ensure iframe takes full width on small screens */
+        height: 600px; /* Adjust height to fit better on small screens */
+    }
+    @keyframes gradient-mobile {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+

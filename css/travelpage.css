@@ -1,0 +1,142 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for the whole page */
+    color: #e0e0e0; /* Light text color */
+    overflow: hidden; /* Prevent default scroll on body */
+}
+
+/* Container for the left panel and main content */
+.container {
+    display: flex;
+    height: 100vh; /* Ensure the container takes the full viewport height */
+}
+
+
+/* Styling for the main content area */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 40px;
+    padding-bottom: 60px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+}
+
+
+/* Travel page styling */
+.countries {
+    display: flex;
+    flex-direction: column; /* Stack countries vertically */
+    gap: 20px; /* Space between countries */
+}
+
+/* Country container */
+.country {
+    display: flex;
+    flex-direction: row; /* Arrange contents in a row */
+    align-items: center; /* Align items vertically center */
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 20px; /* Space between items */
+    border: 2px solid #505050; /* Bright pink border */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    flex-shrink: 0; /* Prevent shrinking of the container */
+}
+
+/* Country name */
+.country-name {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+    width: 300px; /* Fixed width for name */
+}
+.usa-home {
+    display: flex;
+    align-items: center; /* Vertically centers the flag and the emoji */
+}
+
+.house {
+    padding-left: 10px;
+}
+
+/* Flag image */
+.flag {
+    width: 25px; /* Adjust width as needed */
+    height: auto;
+}
+
+/* Photos container */
+.photos {
+    display: flex;
+    flex-direction: row; /* Arrange photos in a row */
+    gap: 10px; /* Space between photos */
+    flex-grow: 1; /* Allow photos container to grow and fill available space */
+    overflow: auto; /* Allow scrolling within the photos container if needed */
+}
+
+/* Individual photo */
+.photos img {
+    width: auto; /* Adjust size as needed */
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack items vertically */
+        padding-bottom: 65px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    
+    .country {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center the text */
+    }
+
+    .country-name {
+        width: auto; /* Allow name to use full width */
+        text-align: center; 
+    }
+
+    .flag {
+        margin-bottom: 10px; /* Space between flag and photos */
+    }
+
+    .photos {
+        flex-direction: row; /* Keep photos in a row */
+        flex-wrap: wrap; /* Allow photos to wrap */
+        justify-content: center; /* Center photos within the container */
+        gap: 20px; /* Adjust gap between photos */
+    }
+
+    .photos img {
+        height: 250px;
+        width: auto; /* Adjust photo size for smaller screens */
+    }
+
+    .house {
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    @keyframes gradient-mobile {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}

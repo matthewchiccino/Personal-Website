@@ -1,0 +1,110 @@
+
+
+/* Styling for the main content area */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /* Allows projects to wrap if they exceed the width */
+    justify-content: space-between; /* Distributes space between projects */
+    
+    padding-left: 60px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    position: relative; /* Ensure expand-button positioning is relative to this container */
+    transition: margin-left 0.3s ease; /* Smooth transition when margin changes */
+}
+
+/* Styling for the project cards */
+.project {
+    width: calc(48% - 20px); /* 48% width with space for margin */
+    margin: 10px 0; /* Space above and below each project */
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border: 2px solid #ffffff; /* Adding a border */
+    transition: transform 0.3s;
+    background-color: #282828;
+}
+
+.project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 2);
+    background-color: #1f2c39; /* Example color */
+}
+
+.project-info {
+    padding: 20px;
+    position: relative;
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.project-description {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.github-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.github-link img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.github-link:hover img {
+    transform: scale(1.3);
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack items vertically */
+        
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    @keyframes gradient-mobile {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    
+
+    .project {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Space above and below each project */
+        position: relative; /* Ensure positioning is relative to the container */
+    }
+    .github-link {
+        position: static; /* Change positioning to static */
+        display: block; /* Ensure the link is displayed as a block element */
+        margin-top: 10px; /* Add space above the GitHub link */
+        text-align: right; /* Align to the right of the container */
+    }
+
+    .github-link img {
+        width: 24px; /* Adjust icon size for mobile */
+        height: 24px; /* Adjust icon size for mobile */
+    }
+}
+
