@@ -22,7 +22,8 @@
 }
 
 .bu-logo-container img {
-    width: 150px;
+    max-width: 150px;
+    width: auto;
     height: auto;
 }
 
