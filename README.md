@@ -1,6 +1,6 @@
 # Personal Website README
 
-This is a my personal website. It is how I taught myself html and css from scratch. I will be an up-to-date work-in-progress collection
+This is a my personal website. It is how I taught myself html and css from scratch. It will be an up-to-date work-in-progress collection
 of relevent professional infromation, personal information I feel like sharing, and a display of my _humble_ frontend skills.
 
 Here’s a quick rundown of the project structure:
@@ -13,4 +13,4 @@ Here’s a quick rundown of the project structure:
 
 
 
-Feel free to check it out at [Link Text](https://matthewchiccino.github.io/Personal-Website/home.html)
+Feel free to check it out  [here](https://matthewchiccino.github.io/Personal-Website/home.html)
