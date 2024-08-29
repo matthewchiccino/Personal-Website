@@ -1,4 +1,8 @@
 
+@keyframes typing {
+    from { width: 0; }
+    to { width: 300px; }
+}
 
 /* Styling for the main content area */
 .main-content {
@@ -11,15 +15,21 @@
     padding-right: 40px;
     box-sizing: border-box;
     position: relative; /* Ensure expand-button positioning is relative to this container */
-    transition: margin-left 0.3s ease; /* Smooth transition when margin changes */
+    transition: margin-left 0.5s ease;
 }
 
-/* Styling for the blurb */
 .blurb {
-    flex: 1; /* Allow the blurb to grow and take available space */
-    padding-right: 50px; /* Add some space between the blurb and the image */
-    padding-left: 50px; /* Add some space between the blurb and the image */
+    flex:1;
+    animation: typing 1s steps(30, end) forwards;
+    padding-right: 50px;
+    padding-left: 50px;
 }
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
 
 /* Container to position the image as a flex item */
 .image-container {
