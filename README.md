@@ -1,6 +1,5 @@
 # Personal Website README
 
-## Overview
 This is a my personal website. It is how I taught myself html and css from scratch. I will be an up-to-date work-in-progress collection
 of relevent professional infromation, personal information I feel like sharing, and a display of my _humble_ frontend skills.
 
