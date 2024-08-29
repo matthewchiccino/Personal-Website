@@ -52,16 +52,5 @@
         width: 100%; /* Ensure iframe takes full width on small screens */
         height: 600px; /* Adjust height to fit better on small screens */
     }
-    @keyframes gradient-mobile {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
 }
 

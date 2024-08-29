@@ -96,18 +96,6 @@
     transition: margin-left 0.3s ease; /* Smooth transition when margin changes */
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     
@@ -121,17 +109,6 @@
 
     .gr_custom_container_ {
         max-width: 100%; /* Ensure widget fits within screen width */
-    }
-    @keyframes gradient-mobile {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
     }
 }
 

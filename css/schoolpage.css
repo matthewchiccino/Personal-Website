@@ -9,14 +9,22 @@
 /* Styling for the main content area */
 .main-content {
     flex-grow: 1;
-    padding-left: 60px;
-    padding-right: 150px;
+    padding-left: 450px;
+    padding-right: 450px;
     padding-top: 20px;
     padding-bottom: 40px;
     overflow-y: auto; /* Allow scrolling within the left panel if needed */
 
 }
 
+.bu-logo-container {
+    text-align: center; 
+}
+
+.bu-logo-container img {
+    width: 150px;
+    height: auto;
+}
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
@@ -28,17 +36,5 @@
         padding-bottom: 20px;
     }
 
-    
-    @keyframes gradient-mobile {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
 }
 
