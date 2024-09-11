@@ -132,7 +132,7 @@ body, html {
     /* Adjust the expand button for smaller screens */
     .expand-button {
         right: -20px; /* Adjust position */
-        padding: 5px; /* Smaller padding */
+        padding: 12px; /* Smaller padding */
     }
 
     @keyframes gradient-mobile {

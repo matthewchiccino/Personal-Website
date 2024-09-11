@@ -6,6 +6,10 @@
     flex-direction: row; /* Ensure the panels are side by side by default */
 }
 
+.main-content hr {
+    width: 100%; /* Ensure the hr spans the full width */
+}
+
 
 /* Styling for the header and widgets */
 .header-widgets {
@@ -78,7 +82,6 @@
 
 .time-container {
     clear: both; /* Ensure it doesn't float next to the left-panel */
-    padding: 20px; /* Optional, for spacing */
 }
 
 /* Styling for the main content area */

@@ -1,25 +1,14 @@
-.container {
-    display: flex;
-    height: 100%;
-    flex-wrap: nowrap;
-}
-
 .main-content {
-    overflow-y: auto; 
-    display: flex;
+    padding: 30px; /* Reset padding to ensure content fits well */
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    
 }
 
 .school-content {
-    animation: typing 2s steps(30, end) forwards;
-    width: 80%; /* Width as a percentage of the parent container */
-    max-width: 800px; /* Limits the maximum width */
-    text-align: left; /* Align text to the left within the element */
-    margin: 0 auto; /* Center horizontally */
-    box-sizing: border-box; /* Includes padding in width calculation */
-    
+    animation: typing 1s steps(30, end) forwards;
+    padding-left: 500px; /* Adjust padding to fit content within the container */
+    padding-right: 500px;
+    max-width: 100%; /* Ensure it doesn't exceed the width of the container */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 
@@ -41,12 +30,9 @@
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
-    
-    .main-content {
-        flex-direction: column; /* Stack items vertically */
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 40px;
+    .school-content{
+        max-width: 100%; /* Full width on small screens */
+        padding: 0 5px; /* Adjust padding for smaller screens */
     }
 
 }

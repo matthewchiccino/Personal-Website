@@ -33,11 +33,31 @@
 
         <div class="main-content">
           <h1>here is a bit more about me</h1>
+          <div class="time-container">My current Time: <span id="current-time"> (EST)</span></div>
+
+        <script>
+            function updateTime() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                const currentTime = `${hours}:${minutes}:${seconds}`;
+
+                document.getElementById('current-time').textContent = currentTime;
+            }
+
+            // Initial call to display the time immediately on page load
+            updateTime();
+
+            // Update the time every second
+            setInterval(updateTime, 1000);
+        </script>
+        <hr></hr>
             <div class="spotify">
                 what im listening to
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EpqLWuIi03cuW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
-            
+            <hr></hr>
             <div class="goodreads">
               <p>what i've been reading</p>
                 <style type="text/css" media="screen"></style>
@@ -128,30 +148,8 @@
                     <script src="https://www.goodreads.com/review/custom_widget/135499411.Matthew's%20bookshelf:%20read?cover_position=&cover_size=&num_books=5&order=&shelf=&sort=&widget_bg_transparent=" type="text/javascript" charset="utf-8"></script>
                 </div>
             </div>
-
-
-
-            
-            <div class="time-container">
-                My current Time: <span id="current-time"> (EST)</span>
-            </div>
-            <script>
-                function updateTime() {
-                    const now = new Date();
-                    const hours = now.getHours().toString().padStart(2, '0');
-                    const minutes = now.getMinutes().toString().padStart(2, '0');
-                    const seconds = now.getSeconds().toString().padStart(2, '0');
-                    const currentTime = `${hours}:${minutes}:${seconds}`;
-
-                    document.getElementById('current-time').textContent = currentTime;
-                }
-
-                // Initial call to display the time immediately on page load
-                updateTime();
-
-                // Update the time every second
-                setInterval(updateTime, 1000);
-            </script>
+            <hr></hr>
+            <p>wow really stalking me i see</p>
         </div>
     </div>
 
