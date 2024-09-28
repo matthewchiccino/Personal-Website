@@ -110,6 +110,14 @@ body, html {
     text-decoration: underline; /* Keep underlined */
 }
 
+.section {
+    flex: 1; /* Allow sections to grow and fill available space */
+    border: 2px solid #8f8f8f; /* Border around each section */
+    padding: 20px; /* Padding inside the border */
+}
+
+
+
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
     .main-content {
