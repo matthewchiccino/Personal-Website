@@ -116,7 +116,20 @@ body, html {
     padding: 20px; /* Padding inside the border */
 }
 
+.cat-image-container {
+    width: 150px; /* Adjust this width as needed */
+    overflow: hidden; /* This prevents overflow if the image is larger */
+}
 
+.cat-image-container img {
+    width: 100%; /* Makes the image take up the full width of the container */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.cat-pics {
+    display: flex; /* Use flexbox to arrange children in a row */
+    gap: 10px; /* Optional: space between the images */
+}
 
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
