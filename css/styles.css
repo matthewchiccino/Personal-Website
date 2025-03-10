@@ -110,6 +110,16 @@ body, html {
     text-decoration: underline; /* Keep underlined */
 }
 
+.main-content a {
+    color: #72afff;         /* Make links light blue */
+    text-decoration: none;    /* Optional: Remove underline */
+}
+
+.main-content a:hover {
+    color: #ffe599;          /* Change color on hover */
+}
+
+
 .section {
     flex: 1; /* Allow sections to grow and fill available space */
     border: 2px solid #8f8f8f; /* Border around each section */

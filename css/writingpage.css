@@ -1,0 +1,11 @@
+.article p {
+    color: grey;
+    margin: 0;  /* Remove extra space between paragraphs */
+}
+
+/* Styling for the main content area */
+.main-content {
+    flex: 1; /* Ensure main content takes up remaining space */
+    padding: 30px 200px 150px 150px; /* Padding for content */
+}
+
