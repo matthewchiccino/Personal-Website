@@ -14,7 +14,6 @@
     .main-content {
         flex-direction: column; /* Stack content vertically */
         padding: 30px 40px 40px 40px; /* Padding for content */
-        padding-bottom: 600px; /* Increase bottom padding */
         animation: gradient 7s ease infinite; /* Faster gradient animation */
     }
 }

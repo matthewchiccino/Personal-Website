@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon">
+    <meta property="og:image" content="/images/favicon.ico" />
+    <title>Matthew Chiccino etc</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/mc_logo.png" type="image/png">
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #1e1e1e; }
+        canvas { background: #282828; display: block; margin: auto; }
+
+        /* For simplicity, the game is in a canvas */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel" id="leftPanel">
+            <a href="home.html">home</a>
+            <a href="projects.html">projects</a>
+            <a href="writing.html">writing</a>
+            <a href="school.html">school</a>
+            <a href="resume.html">resume</a>
+            <a href="travel.html">travel</a>
+            <a href="fitness.html">fitness</a>
+            <a href="etc.html">etc</a>
+            <a href="contacts.html">contacts</a>
+            <a href="game.html">game</a>
+
+            <button id="expandButton" class="expand-button">
+              <i class="fa fa-chevron-left"></i>
+          </button> 
+        </div>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+</div>
+<script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const player = {
+        x: 200,
+        y: 100,
+        width: 30,
+        height: 30,
+        color: '#00ffcc',
+        dy: 0,
+        gravity: 0.8,
+        jumpForce: -12,
+        grounded: false,
+        speed: 4
+    };
+
+    let platforms = [
+        { x: 200, y: 350, width: 100, height: 15, speed: 2 },
+        { x: 400, y: 280, width: 100, height: 15, speed: 2 }
+    ];
+
+    let speedIncrease = 0.005;
+    let keys = {};
+    let gameOver = false;
+
+    document.addEventListener('keydown', (e) => keys[e.key] = true);
+    document.addEventListener('keyup', (e) => keys[e.key] = false);
+
+    function resetGame() {
+        player.x = 100;
+        player.y = 100;
+        player.dy = 0;
+        platforms = [
+            { x: 200, y: 350, width: 100, height: 15, speed: 2 },
+            { x: 400, y: 280, width: 100, height: 15, speed: 2 }
+        ];
+        gameOver = false;
+        gameLoop();
+    }
+
+    function gameLoop() {
+        if (gameOver) return showGameOver();
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Player movement
+        if (keys['ArrowRight']) player.x += player.speed;
+        if (keys['ArrowLeft']) player.x -= player.speed;
+        if (keys['ArrowUp'] && player.grounded) {
+            player.dy = player.jumpForce;
+            player.grounded = false;
+        }
+
+        // Apply gravity
+        player.dy += player.gravity;
+        player.y += player.dy;
+        player.grounded = false;
+
+        // Move and draw platforms
+        platforms.forEach(platform => {
+            platform.x -= platform.speed;
+            platform.speed += speedIncrease; // Gradually increase speed
+
+            // Loop platforms
+            if (platform.x + platform.width < 0) {
+                platform.x = canvas.width + Math.random() * 100;
+                platform.y = 200 + Math.random() * 150;
+            }
+
+            // Collision detection
+            if (player.y + player.height <= platform.y &&
+                player.y + player.height + player.dy >= platform.y &&
+                player.x + player.width > platform.x &&
+                player.x < platform.x + platform.width) {
+                player.y = platform.y - player.height;
+                player.dy = 0;
+                player.grounded = true;
+            }
+
+            // Draw platform
+            ctx.fillStyle = '#444';
+            ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+        });
+
+        // Draw player
+        ctx.fillStyle = player.color;
+        ctx.fillRect(player.x, player.y, player.width, player.height);
+
+        // Check if player falls off
+        if (player.y > canvas.height) {
+            gameOver = true;
+        }
+
+        requestAnimationFrame(gameLoop);
+    }
+
+    function showGameOver() {
+        ctx.fillStyle = '#fff';
+        ctx.font = '24px Arial';
+        ctx.fillText('Game Over! Press R to Restart', 150, canvas.height / 2);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'r' || e.key === 'R') resetGame();
+        }, { once: true });
+    }
+
+    gameLoop();
+</script>
+</body>
+</html>
