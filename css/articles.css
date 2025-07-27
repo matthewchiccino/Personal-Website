@@ -1,6 +1,11 @@
 .main-content {
     background:  #232323;
-    padding: 30px 400px 150px 350px; /* Padding for content */
+}
+
+.text {
+    width: 55%; /* takes 90% of screen width on smaller screens */
+    max-width: 900px; /* limits width on large screens */
+    margin: 0 auto; /* centers the content */
 }
 #title {
     margin-bottom: 0;
