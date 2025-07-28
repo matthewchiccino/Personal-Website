@@ -27,4 +27,7 @@
         padding-bottom: 600px; /* Increase bottom padding */
         animation: gradient 7s ease infinite; /* Faster gradient animation */
     }
+    .text{
+        width: 100%
+    }
 }
