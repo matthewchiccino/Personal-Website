@@ -1,19 +1,17 @@
-.article p {
-    color: grey;
-    margin: 0;  /* Remove extra space between paragraphs */
-}
-
-/* Styling for the main content area */
 .main-content {
-    flex: 1; /* Ensure main content takes up remaining space */
-    padding: 30px 200px 150px 150px; /* Padding for content */
+    flex: 1;
+    padding: 32px 56px 120px 56px;
+    max-width: 720px;
+    margin: 0 auto;
 }
 
-/* Media query for screens smaller than 768px */
+.article p {
+    color: var(--text-muted);
+    margin: 0 0 1em 0;
+}
+
 @media (max-width: 768px) {
     .main-content {
-        flex-direction: column; /* Stack content vertically */
-        padding: 30px 40px 40px 40px; /* Padding for content */
-        animation: gradient 7s ease infinite; /* Faster gradient animation */
+        padding: 24px 20px 100px 20px;
     }
 }

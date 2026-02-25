@@ -1,33 +1,33 @@
 .main-content {
-    background:  #232323;
+    padding: 32px 56px 120px 56px;
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--bg);
 }
 
 .text {
-    width: 55%; /* takes 90% of screen width on smaller screens */
-    max-width: 900px; /* limits width on large screens */
-    margin: 0 auto; /* centers the content */
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
 }
+
 #title {
     margin-bottom: 0;
+    color: var(--text);
 }
+
 #name {
-    color: rgb(157, 157, 157);
-    margin-top: 0; 
+    color: var(--text-muted);
+    margin-top: 0;
+    font-size: 0.95rem;
 }
 
 .underline-link {
     text-decoration: underline;
 }
 
-/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
     .main-content {
-        flex-direction: column; /* Stack content vertically */
-        padding: 30px 40px 40px 40px; /* Padding for content */
-        padding-bottom: 600px; /* Increase bottom padding */
-        animation: gradient 7s ease infinite; /* Faster gradient animation */
-    }
-    .text{
-        width: 100%
+        padding: 24px 20px 100px 20px;
     }
 }

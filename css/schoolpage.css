@@ -1,39 +1,33 @@
 .main-content {
-    padding: 30px; /* Reset padding to ensure content fits well */
+    padding: 32px 56px 80px 56px;
     flex-direction: column;
+    max-width: 720px;
+    margin: 0 auto;
 }
 
 .school-content {
-    animation: typing 1s steps(30, end) forwards;
-    padding-left: 300px; /* Adjust padding to fit content within the container */
-    padding-right: 300px;
-    max-width: 100%; /* Ensure it doesn't exceed the width of the container */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    padding-left: 0;
+    padding-right: 0;
 }
-
-
-@keyframes typing {
-    from {width: 0}
-    to {width: 100%}
-}
-
 
 .bu-logo-container {
-    text-align: center; 
+    text-align: center;
+    margin: 24px 0;
 }
 
 .bu-logo-container img {
-    max-width: 150px;
+    max-width: 140px;
     width: auto;
     height: auto;
+    opacity: 0.9;
 }
 
-/* Media query for mobile screens */
 @media (max-width: 768px) {
-    .school-content{
-        max-width: 100%; /* Full width on small screens */
-        padding: 0 5px; /* Adjust padding for smaller screens */
+    .main-content {
+        padding: 24px 20px 80px 20px;
     }
 
+    .school-content {
+        padding: 0;
+    }
 }
-
