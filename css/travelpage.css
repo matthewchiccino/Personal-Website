@@ -82,7 +82,7 @@ body, html {
 /* Individual photo */
 .photos img {
     width: auto; /* Adjust size as needed */
-    height: 250px;
+    height: 220px;
     object-fit: cover;
 }
 
