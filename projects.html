@@ -17,21 +17,22 @@
 
 <body>
     <div class = "container">
-        <div class="left-panel" id="leftPanel">
-            <a href="home.html">home</a>
-            <a href="projects.html">projects</a>
-            <a href="school.html">school</a>
-            <a href="https://matthewchiccino.github.io/resume/matthew_chiccino_resume.pdf" target="_blank">resume</a>
-            <a href="writing.html">writing</a>
-            <a href="travel.html">travel</a>
-            <a href="etc.html">etc</a>
-            <a href="contacts.html">contacts</a>
-
-            <button id="expandButton" class="expand-button">
-                <i class="fa fa-chevron-left"></i>
-            </button> 
-        </div>
+        <div id="left-panel-mount"></div>
         <div class="main-content">
+            <div class="project">
+                <div class="project-info">
+                    <h3>Block Party</h3>
+                    <div class="project-description">
+                        <p>
+                            Project from hackathon hosted by <a href="https://ascii-converter-snowy.vercel.app/" target="_blank">CYVL</a>
+                            uses LiDAR datapoints to suggest locations for outdoor public events, inspired by 2026 FIFA World Cup and NBA Finals. 
+                        </p>
+                    </div>
+                    <a href="https://github.com/SaiNel7/cyvl-hacks" target="_blank" class="github-link">
+                        <img src="assets/gh_icon.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
             <div class="project">
                 <div class="project-info">
                     <h3>ASCII Art Converter</h3>
@@ -180,25 +181,7 @@
         </div>
     </footer>
 
-    <script>
-        const leftPanel = document.getElementById('leftPanel');
-        const expandButton = document.getElementById('expandButton');
-        const icon = expandButton.querySelector('i'); // Get the <i> tag inside the button
-
-        expandButton.addEventListener('click', () => {
-        leftPanel.classList.toggle('collapsed');
-
-        // Toggle the icon direction based on the panel state
-        if (leftPanel.classList.contains('collapsed')) {
-            icon.classList.remove('fa-chevron-left');
-            icon.classList.add('fa-chevron-right');
-        } else {
-            icon.classList.remove('fa-chevron-right');
-            icon.classList.add('fa-chevron-left');
-        }
-    });
-    </script>
-    <script src="functionality/PanelCollapse.js" defer></script>
+    <script src="functionality/loadLeftPanel.js" defer></script>
 </body>
 </html>
 

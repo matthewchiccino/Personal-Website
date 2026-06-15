@@ -17,20 +17,7 @@
 
 <body>
     <div class = "container">
-        <div class="left-panel" id="leftPanel">
-            <a href="home.html">home</a>
-            <a href="projects.html">projects</a>
-            <a href="school.html">school</a>
-            <a href="https://matthewchiccino.github.io/resume/matthew_chiccino_resume.pdf" target="_blank">resume</a>
-            <a href="writing.html">writing</a>
-            <a href="travel.html">travel</a>
-            <a href="etc.html">etc</a>
-            <a href="contacts.html">contacts</a>
-
-            <button id="expandButton" class="expand-button">
-                <i class="fa fa-chevron-left"></i>
-            </button> 
-        </div>
+        <div id="left-panel-mount"></div>
         <div class="main-content">
             <div class="bu-logo-container">
                 <img src="assets/bu_logo.png" alt="Boston University Logo">
@@ -89,14 +76,41 @@
                     <p>Grade: A</p>
 
                     <h2>CS351 - Distributed Systems</h2>
-                        <p>Currently taking...</p>
+                        <p>This class was highly conceptual. I remember the each lecture would be an advanced 
+                            distributed systems topic, and the assignments would be implementing it in code. concepts
+                            became useful for understanding certain things outside of class, especially the Bitcoin
+                            Protocol. 
+                        </p>
+                        <p>Difficulty: 6/10</p>
+                        <p>Grade: A-</p>
 
                     <h2>CS411 - Software Engineering</h2>
-                        <p>Currently taking...</p>
+                        <p>Majority of the course was on not directly about software. Instead it disucsses systems around
+                            the process of planning coordinating and executing software development. Project was very easy 
+                            barrier of entry especially with ai tools. 
+                        </p>
+                        <p><a href="https://github.com/Marhvin/WellBU" target="_blank">Final Project</a></p>
+                        <p>Difficulty: 2/10</p>
+                        <p>Grade: B+</p>
 
                     <h2>CS460 - Databases</h2>
-                        <p>Currently taking...</p>
+                        <p><a href="https://cs-people.bu.edu/dgs/" target="_blank">Professor Sullivan</a> does a 
+                            phenomenal job of curating course content and assignments. We covered topics in 
+                            databases from a hardware level, distributed dbs, multiple query languages and more. 
+                            Engaging and interesting, thoroughly challenged and enjoyed this class. 
+                        </p>
+                        <p>Difficulty: 6/10</p>
+                        <p>Grade: B+</p>
+
+                    <h2>CS320 - Programming Languages</h2>
+                        <p>coming soon...</p>
+                    <h2>CS412 - Full-Stack Applications</h2>
+                        <p>coming soon...</p>
+                    <h2>CS598 - Agentic AI</h2>xs
+                        <p>coming soon...</p>
                     <hr></hr>
+                    
+
 
                     <h2>CS131 - Discrete Math/Combinatoric Structures</h2>
                     <p>
@@ -151,7 +165,7 @@
             <a href="https://www.instagram.com/matthewchiccino/" class="fa fa-instagram" target="_blank"></a>
         </div>
     </footer>
-    <script src="functionality/PanelCollapse.js" defer></script>
+    <script src="functionality/loadLeftPanel.js" defer></script>
 </body>
 </html>
 
