@@ -20,23 +20,27 @@
 
         <div class="main-content">
           <h1>here is a bit more about me</h1>
-          <div class="time-container">My current Time: <span id="current-time"> (EST)</span></div>
+          <div class="time-container">my time: <span id="current-time"></span></div>
 
         <script>
             function updateTime() {
                 const now = new Date();
-                const hours = now.getHours().toString().padStart(2, '0');
-                const minutes = now.getMinutes().toString().padStart(2, '0');
-                const seconds = now.getSeconds().toString().padStart(2, '0');
-                const currentTime = `${hours}:${minutes}:${seconds}`;
+                const timeStr = now.toLocaleTimeString('en-US', {
+                    timeZone: 'America/New_York',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                });
+                const tzAbbr = now.toLocaleTimeString('en-US', {
+                    timeZone: 'America/New_York',
+                    timeZoneName: 'short'
+                }).split(' ').pop();
 
-                document.getElementById('current-time').textContent = currentTime;
+                document.getElementById('current-time').textContent = `${timeStr} (${tzAbbr})`;
             }
 
-            // Initial call to display the time immediately on page load
             updateTime();
-
-            // Update the time every second
             setInterval(updateTime, 1000);
         </script>
         <hr></hr>
@@ -187,21 +191,9 @@
         </div>
     </div>
 
-    <footer>
-        <div>
-            <a href="mailto:chiccino@bu.edu" class="fa fa-envelope"></a>
-        </div>
-        <div>
-            <a href="https://www.linkedin.com/in/matthew-chiccino-935848290/" class="fa fa-linkedin" target="_blank"></a>
-        </div>
-        <div>
-            <a href="https://github.com/matthewchiccino" class="fa fa-github" target="_blank"></a>
-        </div>
-        <div>
-            <a href="https://www.instagram.com/matthewchiccino/" class="fa fa-instagram" target="_blank"></a>
-        </div>
-    </footer>
-  <script src="functionality/loadLeftPanel.js" defer></script>
+    <div id="footer-mount"></div>
+
+    <script src="functionality/loadLeftPanel.js" defer></script>
 </body>
 </html>
 

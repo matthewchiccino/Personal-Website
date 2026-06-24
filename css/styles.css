@@ -80,6 +80,11 @@ body, html {
     text-decoration: underline; /* Underline the text */
 }
 
+/* Style for the current page link */
+.left-panel a.active {
+    color: #ffe599;
+}
+
 /* Remove the underline from the last link */
 .left-panel a:last-child {
     border-bottom: none; /* Remove bottom border from the last link */

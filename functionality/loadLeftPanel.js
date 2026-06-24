@@ -27,14 +27,36 @@ function prefixRelativeLinks(root, base) {
     });
 }
 
+function markActiveLink(root) {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    root.querySelectorAll('a[href]').forEach((link) => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
+
 const script = document.currentScript;
 const base = script?.dataset.base || '';
-const mount = document.getElementById('left-panel-mount');
 
-fetch(base + 'components/left-panel.html')
-    .then((response) => response.text())
-    .then((html) => {
-        mount.outerHTML = html.trim();
-        prefixRelativeLinks(document.getElementById('leftPanel'), base);
-        initPanelCollapse();
-    });
+const mount = document.getElementById('left-panel-mount');
+if (mount) {
+    fetch(base + 'components/left-panel.html')
+        .then((response) => response.text())
+        .then((html) => {
+            mount.outerHTML = html.trim();
+            prefixRelativeLinks(document.getElementById('leftPanel'), base);
+            markActiveLink(document.getElementById('leftPanel'));
+            initPanelCollapse();
+        });
+}
+
+const footerMount = document.getElementById('footer-mount');
+if (footerMount) {
+    fetch(base + 'components/footer.html')
+        .then((response) => response.text())
+        .then((html) => {
+            footerMount.outerHTML = html.trim();
+        });
+}
