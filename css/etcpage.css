@@ -115,3 +115,20 @@
     }
 }
 
+
+/* Spotify and Goodreads side by side */
+.widgets-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.widgets-row .spotify {
+    width: 300px;
+    max-width: 100%;
+}
+
+.widgets-row p {
+    margin: 0 0 10px 0;
+}
