@@ -122,6 +122,14 @@ body, html {
     color: #ffe599;          /* Change color on hover */
 }
 
+/* Secondary links: always light grey, no color change */
+.main-content a.a-secondary,
+.main-content a.a-secondary:hover,
+.main-content a.a-secondary:active,
+.main-content a.a-secondary:focus,
+.main-content a.a-secondary:visited {
+    color: #b0b0b0; /* Light grey */
+}
 
 .section {
     flex: 1; /* Allow sections to grow and fill available space */
